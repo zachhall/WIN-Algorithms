@@ -3,8 +3,8 @@ class BubbleSort {
         // O(1) space, O(n^2) time
         int n = arr.length;
         // must do n-l, otherwise get out of bounds error on final element
-        for (int i = 0; i < n - 1; i++)
-            for (int j = 0; j < n - i - 1; j++)
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
                     // swap arr[j+1] and arr[i]
                     int temp = arr[j];
@@ -12,10 +12,13 @@ class BubbleSort {
                     arr[j + 1] = temp;
                     printArray(arr);
                 }
+            }
+        }
     }
 
     // Prints the array
     void printArray(int arr[]) {
+        // O(1) space, O(n) time
         int n = arr.length;
         for (int i = 0; i < n; ++i)
             System.out.print(arr[i] + " ");
